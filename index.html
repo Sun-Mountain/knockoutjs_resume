@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>resume</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+
+</head>
+<body>
+    <h3>Nicole Zonnenberg</h3>
+    <div>Software Engineer</div>
+    <div>
+        Work Experience:
+    </div>
+    <div>
+        <select id="mySelect" multiple="multiple" data-bind="options: experience" onchange="getJobList(this)"></select>
+    </div>
+    <div id="jobList"></div>
+</body>
+    <script src="index.js"></script>
+</html>
