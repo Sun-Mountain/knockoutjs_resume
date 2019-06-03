@@ -11,6 +11,7 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.5.0/knockout-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
 
 </head>
 <body>
@@ -20,9 +21,10 @@
         Work Experience:
     </div>
     <div>
-        <select id="mySelect" multiple="multiple" data-bind="options: experience" onchange="getJobList(this)"></select>
+        <select id="mySelect" multiple="multiple" data-bind="options: experience" onchange="getSelected()"></select>
     </div>
-    <div id="jobList"></div>
+    <div id="job-container">
+    </div>
 </body>
     <script src="index.js"></script>
 </html>

@@ -1,53 +1,56 @@
 console.log('logged on');
 
-function getJobList(sel) {
-    var opts = [];
+// Resume
+const resume = [
+    {
+        job: 'Potomac Wave Consulting - JavaScript Developer',
+        description: 'ptw description'
+    },
+    {
+        job: 'General Assembly - Software Engineer',
+        description: 'ga description'
+    },
+    {
+        job: 'Freelance Front-End Developer',
+        description: 'ffe - description'
+    },
+    {
+        job: 'Mobtown Ballroom - Event Coordinator, Teacher, DJ Coordinator',
+        description: 'mb - description'
+    },
+    {
+        job: 'Johns Hopkins University',
+        description: 'jhu - description'
+    }
+]
 
-    var len = sel.options.length;
+var showJobs = [];
 
-    for (var i = 0; i < len; i++) {
-        var opt = sel.options[i];
+var getSelected = function() {
+    var select1 = document.getElementById('mySelect');
+    var selected1 = [];
+    var showJobs = [];
 
-        var optHtml = opt.value;
-
-        if (opt.selected) {
-            opts.push(optHtml);
+    for (var i = 0; i < select1.length; i++) {
+        if (select1.options[i].selected) {
+            selected1.push(select1.options[i].value);
         }
     }
 
-    var printJobList = document.querySelector('#jobList');
-
-    printJobList.innerHTML = '<ul>' + opts.map(function(job) {
-        return '<li>' + job + '</li>';
-    }).join('') + '</ul>';
+    resume.forEach((e1) => selected1.forEach((e2) => {
+        if(e1.job === e2) {
+            showJobs.push(e1.description)
+        }
+    }))
 }
 
 function AppViewModel() {
     console.log('view installed');
-    
-    // Arrays
-    this.experience = ko.observableArray([
-        "PotomacWave Consulting - JavaScript Developer",
-        "General Assembly - Software Engineer",
-        "Freelance Front-End Developer",
-        "Mobtown Ballroom - Event Coordinator, Teacher, DJ Coordinator",
-        "Johns Hopkins University"
-    ]);
 
-    this.projects = ko.observableArray([
-        "Periodic Table Flashcards",
-        "KnockoutJS Resume"
-    ]);
+    // Resume parsing
+    this.experience = _.pluck(resume, 'job');
 
-    // Actions
-    this.listJobs = function() {
-        console.log('list');
-        if (document.getElementById('myExperience')) {
-            console.log('yes')
-        } else {
-            console.log('nah')
-        }
-    };
+    // Visible List
 }
 
 ko.applyBindings(new AppViewModel());
