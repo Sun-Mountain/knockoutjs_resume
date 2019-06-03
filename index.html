@@ -17,24 +17,28 @@
 <body>
     <h3>Nicole Zonnenberg</h3>
     <div>Software Engineer</div>
+    <div class="main-container">
         <div>
             Work Experience:
         </div>
-    <div class="flex-container">
-        <div>
-            <select id="resume-experience" multiple="multiple" data-bind="options: experience" onchange="getSelectedJobs()"></select>
-        </div>
-        <div id="job-container">
+        <div class="flex-container">
+            <div class="select-box">
+                <select id="resume-experience" multiple="multiple" data-bind="options: experience" onchange="getSelectedJobs()"></select>
+            </div>
+            <div class="list-container" id="job-container">
+            </div>
         </div>
     </div>
+    <div class="main-container">
         <div>
             Personal Projects:
         </div>
-    <div class="flex-container">
-        <div>
-            <select id="personal-projects" multiple="multiple" data-bind="options: myProjects" onchange="getSelectedProjects()"></select>
-        </div>
-        <div id="project-container">
+        <div class="flex-container">
+            <div class="select-box">
+                <select id="personal-projects" multiple="multiple" data-bind="options: myProjects" onchange="getSelectedProjects()"></select>
+            </div>
+            <div class="list-container" id="project-container">
+            </div>
         </div>
     </div>
 </body>
