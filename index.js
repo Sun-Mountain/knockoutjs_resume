@@ -24,12 +24,14 @@ const resume = [
     }
 ]
 
+// Showing resume descriptions
 var showJobs = [];
 
 var getSelected = function() {
     var select1 = document.getElementById('mySelect');
     var selected1 = [];
-    var showJobs = [];
+
+    showJobs.length = 0;
 
     for (var i = 0; i < select1.length; i++) {
         if (select1.options[i].selected) {
@@ -42,6 +44,16 @@ var getSelected = function() {
             showJobs.push(e1.description)
         }
     }))
+
+    var str = '<ul>'
+
+    showJobs.forEach(function(job) {
+        str += '<li>' + job + '</li>';
+    });
+
+    str += '</ul>';
+
+    document.getElementById('job-container').innerHTML = str;
 }
 
 function AppViewModel() {
@@ -49,8 +61,6 @@ function AppViewModel() {
 
     // Resume parsing
     this.experience = _.pluck(resume, 'job');
-
-    // Visible List
 }
 
 ko.applyBindings(new AppViewModel());
