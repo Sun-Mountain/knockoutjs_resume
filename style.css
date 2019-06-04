@@ -17,6 +17,15 @@ h3 {
     text-align: center;
 }
 
+h4 {
+    margin: 0;
+}
+
+#heading {
+    margin: 0 0 15px 0;
+    text-align: center;
+}
+
 li {
     list-style: none;
 }

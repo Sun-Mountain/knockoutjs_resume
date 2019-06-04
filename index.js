@@ -4,23 +4,28 @@ console.log('logged on');
 const resume = [
     {
         job: 'Potomac Wave Consulting',
-        description: 'ptw description'
+        date: 'May 2019 - Present',
+        description: 'Creates and maintains platforms for internal organization and communication with a focus on JavaScript, jQuery, and Sharepoint.'
     },
     {
         job: 'General Assembly',
-        description: 'ga description'
+        date: 'December 2018 - March 2019',
+        description: 'Built applications using various languages including HTML, CSS, JavaScript, Express, React.js, MongoDB, Python.'
     },
     {
         job: 'Freelance Frontend Developer',
-        description: 'ffe - description'
+        date: 'March 2018 - November 2018',
+        description: 'Consulted on and designed layouts for mobile responsive emailed content. Provided HTML & CSS services for mobile responsive layouts.'
     },
     {
         job: 'Mobtown Ballroom',
-        description: 'mb - description'
+        date: 'June 2014 - May 2019',
+        description: 'Organized regional and national events, managing the advertising and logistics, organizing volunteers, MCing, and being the on-site manager. \nFacilitated bi-weekly dances. \nTaught American vernacular dance to teenage and adult students.'
     },
     {
         job: 'Johns Hopkins University',
-        description: 'jhu - description'
+        date: 'November 2014 - Feb 2018',
+        description: 'Curated lab’s social media accounts, website, and blog.\nCollected and assembled articles for quarterly newsletter.\nProvided graphic design for lab including branding, web design, and general media graphics.'
     }
 ]
 
@@ -54,14 +59,14 @@ var getSelectedJobs = function() {
 
     resume.forEach((e1) => selectedJobs.forEach((e2) => {
         if(e1.job === e2) {
-            showJobs.push(e1.description)
+            showJobs.push(e1)
         }
     }))
 
     var str = '<ul>';
 
     showJobs.forEach(function(job) {
-        str += '<li>' + job + '</li>';
+        str += '<li><ul><li>' + job.job + '</li><li>' + job.date + '</li><li>' + job.description + '</li></ul></li>';
     });
 
     str += '</ul>';
