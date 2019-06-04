@@ -1,3 +1,3 @@
 # KnockoutJS Resume
 
-Experimenting with the (https://knockoutjs.com/)[KnockoutJS library]
+Experimenting with the (KnockoutJS library)[https://knockoutjs.com/]
