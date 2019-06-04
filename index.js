@@ -66,7 +66,7 @@ var getSelectedJobs = function() {
     var str = '<ul>';
 
     showJobs.forEach(function(job) {
-        str += '<li><ul><li>' + job.job + '</li><li>' + job.date + '</li><li>' + job.description + '</li></ul></li>';
+        str += '<li class="single"><ul><li class="title">' + job.job + '</li><li class="detail">' + job.date + '</li><li>' + job.description + '</li></ul></li>';
     });
 
     str += '</ul>';
@@ -98,7 +98,7 @@ var getSelectedProjects = function() {
     var str = '<ul>';
 
     showProjects.forEach(function(project) {
-        str += '<li class="single-project"> <ul> <li>' + project.title + '</li> <li>' + project.languages + '</li> <li>' + project.description + '</li> </ul> </li>'
+        str += '<li class="single"> <ul> <li class="title">' + project.title + '</li> <li class="detail">' + project.languages + '</li> <li>' + project.description + '</li> </ul> </li>'
     });
 
     str += '</ul>';

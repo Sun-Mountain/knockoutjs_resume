@@ -5,6 +5,11 @@ body {
     max-width: 650px;
 }
 
+.detail {
+    font-size: 12px;
+    padding: 2px 0 5px 0;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -30,11 +35,13 @@ li {
     list-style: none;
 }
 
-    .single-project {
+    .single {
         margin: 0 0 15px 0;
     }
 
 .list-container {
+    height: 250px;
+    overflow: auto;
     width: 300px;
 }
 
@@ -43,11 +50,18 @@ li {
 }
 
 select {
+    height: 250px;
     width: 300px;
+    border: none;
+    outline: none;
 }
 
 .select-box {
     max-width: 30px;
+}
+
+.title {
+    font-weight: bold;
 }
 
 ul {
