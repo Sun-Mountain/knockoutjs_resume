@@ -5,6 +5,15 @@ body {
     max-width: 650px;
 }
 
+a {
+    color: #EF476F;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .75;
+}
+
 .detail {
     font-size: 12px;
     padding: 2px 0 5px 0;
@@ -55,6 +64,10 @@ select {
     border: none;
     outline: none;
 }
+
+select[multiple]:focus option:checked {
+    background: #EF476F linear-gradient(0deg, #EF476F 0%, #EF476F 100%);
+  }
 
 .select-box {
     max-width: 30px;
